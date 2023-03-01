@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/global.css" />
-    <title>Calculadora</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <!-- Boostrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+  <link rel="shortcut icon" href="./assets/img/favicon-32x32.png" type="image/x-icon">
+  <title>Calculadora</title>
+</head>
+
+<body class="light-theme">
+  <div class="containerCalculadora">
+    <button id="theme-toggle">
+      <i id="sol" class="bi bi-moon-stars-fill"></i>
+    </button>
     <h1>Calculadora Básica</h1>
-
-    <div class="containerCalculadora">
-      <input type="text" id="num1" />
-      <input type="text" id="num2" />
-      <input type="text" id="resultado" disabled />
-      <button onclick="somar()">calcular</button>
+    <input type="text" id="num1" />
+    <input type="text" id="num2" />
+    <div class="contentLimpar"></div>
+    <button id="btnLimpar">Limpar</button>
+    <p class="resultado">Resultado: <span id="resultado"></span></p>
+    
+    <div class="contentBtn">
+      <button id="btnSomar" class="btnCalcular">+</button>
+      <button id="btnSubtrair" class="btnCalcular">-</button>
+      <button id="btnDividir" class="btnCalcular">/</button>
+      <button id="btnMultiplicar" class="btnCalcular">*</button>
     </div>
+    <div class="imagemMatematica">
+      <img src="./assets/img/Mathematics-amico.png" alt="">
+    </div>
+  </div>
 
-    <script src="./main.js"></script>
-  </body>
+  <script src="./js/calculo.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
 </html>
